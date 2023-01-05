@@ -79,7 +79,7 @@
 		const stamenwatercolor= L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg', {maxZoom: 19, attribution: '&copy; stamen'});
 		
 		const ign_ortho = L.tileLayer.wms('https://wxs.ign.fr/ortho/geoportail/r/wms?', {layers: 'ORTHOIMAGERY.ORTHOPHOTOS'});
-		const satellite = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+		var satellite = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
 		    pane: 'pane_GoogleHybrid_0',
 		    opacity: 1.0,
 		    attribution: '<a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
@@ -88,6 +88,7 @@
 		    minNativeZoom: 0,
 		    maxNativeZoom: 20
 		});
+		satellite;
 		
 		const hydrogeol = L.tileLayer('https://api.mapbox.com/styles/v1/scedat/cl9ebekdx001y14n6fn5w55wj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2NlZGF0IiwiYSI6ImNsOWViYjNsMDFtNWkzcHF0em4yMWcxM3gifQ.prZCwGPuiTbVTkKXOk9Wpg', {attribution: '&copy; <a href="https://unesdoc.unesco.org/ark:/48223/pf0000380688">BGR, BGS, BRGM, EAWAG & UNESCO</a>', maxZoom: 8});
 		const ign = L.tileLayer('https://wxs.ign.fr/essentiels/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&STYLE=normal&FORMAT=image/png&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}', {maxZoom: 7});

@@ -79,6 +79,7 @@
 		const stamenwatercolor= L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg', {maxZoom: 19, attribution: '&copy; stamen'});
 		
 		const ign_ortho = L.tileLayer.wms('https://wxs.ign.fr/ortho/geoportail/r/wms?', {layers: 'ORTHOIMAGERY.ORTHOPHOTOS'});
+		const satellite2 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}');
 		var satellite = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
 		    pane: 'pane_GoogleHybrid_0',
 		    opacity: 1.0,
@@ -321,6 +322,7 @@
 		// ajout des couches d'intérêt dans le sélecteur :
 		//layerControl.addBaseLayer(stamenwatercolor, "Stamen Water color");
 		layerControl.addBaseLayer(satellite, "satellite");
+		layerControl.addBaseLayer(satellite2, "satellite2");
 		layerControl.addBaseLayer(positron, "osm positron");
 		layerControl.addBaseLayer(hydrogeol, "carte hydrogeologique Afrique de l'Ouest");
 
